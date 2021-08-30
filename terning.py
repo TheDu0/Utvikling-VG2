@@ -13,9 +13,29 @@ def terning():
         print("Du fikk ", sum)  
 
 
+def telle():
+    for i in range(70):
+        print(i)
+        if i == 70/2:
+            print("Du er halvveis")
 
-for i in range(70):
-    print(i)
-    if i == 35:
-        print("yeeey")
-    
+def frukt():
+    frukt = ["Epple", "Pære", "Sitron"]
+
+    frukt.append("Plomme")
+
+    nfrukt = input("Skriv frukt: ")
+    frukt.append(nfrukt)
+    print(frukt)
+
+def klasselist():
+    klasseliste = []
+    elev = ''
+    while elev !="stopp":
+        elev = input("Skriv inn navn: ")
+        klasseliste.append(elev)
+        if elev == "stopp":
+            klasseliste.remove("stopp")
+        print(klasseliste)
+
+klasselist()
