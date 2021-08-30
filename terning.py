@@ -36,6 +36,9 @@ def klasselist():
         klasseliste.append(elev)
         if elev == "stopp":
             klasseliste.remove("stopp")
+        elif elev == "Stopp":
+            klasseliste.remove("Stopp")
+            
         print(klasseliste)
 
 klasselist()
