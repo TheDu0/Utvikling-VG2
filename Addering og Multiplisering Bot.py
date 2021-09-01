@@ -12,6 +12,7 @@ def addere():
     sum = tall1 + tall2 
 
     str(print("Summen av", tall1, "og", tall2, "er:", sum))
+    starter()
 
 #Multiplisering av to tall
 
@@ -23,6 +24,7 @@ def multiplisere():
     produkt = tall1 * tall2 
 
     str(print("Produktet av", tall1, "og", tall2, "er:", produkt))
+    starter()
 
 def terning():
     terning1 = 0
@@ -34,21 +36,25 @@ def terning():
         terning1 = random.randint(1,6)
         terning2 = random.randint(1,6)
         sum = terning1 + terning2
-        print("Du fikk ", sum)    
+        print("Du fikk ", sum)
 
+        if sum == 12:
+            starter()
 
-start = 0
-start = int(input("Velkommen til matte bot \n Skriv 1 for Addering \n Skriv 2 for Multiplisering \n Skriv 3 for terninger \n Skriv her: "))
+def starter():
 
-if start == 1:
-    addere()
+    start = 0
+    start = int(input("Velkommen til matte bot \n Skriv 1 for Addering \n Skriv 2 for Multiplisering \n Skriv 3 for terninger \n Skriv her: "))
 
-elif start == 2:
-    multiplisere()
+    if start == 1:
+        addere()
 
-elif start == 3:
-    terning()
+    elif start == 2:
+        multiplisere()
 
-else:
-    print("Du skrv inn feil tall")
+    elif start == 3:
+        terning()
 
+    else:
+        print("Du skrv inn feil tall")
+starter()
